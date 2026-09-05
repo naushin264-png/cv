@@ -1,0 +1,196 @@
+%% ---------------------------------------------------------------------------
+%% Nushrat Naushin -- two-page resume (public)
+%%
+%% Build:  pdflatex resume.tex   (run twice so the page count is right)
+%%
+%% This is the SHORT, PUBLIC document: a two-page condensation of the master CV
+%% that lives in the private Resume repository. It is deliberately trimmed --
+%% no exhaustive coursework lists, no full publication list, no committee
+%% rosters. When the master CV gains something significant, decide whether it
+%% earns space here; most additions will not.
+%%
+%% Hard rule: this must stay at two pages. Check the page count after editing.
+%% ---------------------------------------------------------------------------
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{mathptmx}
+\usepackage[margin=0.6in,top=0.55in,bottom=0.6in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{microtype}
+
+\definecolor{linknavy}{HTML}{14487F}
+\definecolor{rulegray}{gray}{0.45}
+\usepackage[colorlinks=true,urlcolor=linknavy,linkcolor=black,citecolor=black]{hyperref}
+
+\emergencystretch=2.5em
+
+\titleformat{\section}
+  {\normalfont\normalsize\bfseries\raggedright}
+  {}{0pt}{\MakeUppercase}[\vspace{-0.5em}\textcolor{rulegray}{\rule{\linewidth}{0.6pt}}]
+\titlespacing*{\section}{0pt}{0.8em}{0.35em}
+
+\setlist[itemize]{leftmargin=1.05em,topsep=0.1em,itemsep=0.06em,parsep=0pt,label=\textbullet}
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+
+\newcommand{\entry}[3]{%
+  \vspace{0.3em}%
+  \noindent\textbf{#1}\hfill\textbf{\textit{#2}}\par
+  \def\tempthird{#3}\ifx\tempthird\empty\else\noindent\textit{#3}\par\fi
+  \vspace{0.05em}%
+}
+
+\newcommand{\skillline}[2]{\vspace{0.2em}\noindent\textbf{#1:} #2\par}
+
+\begin{document}
+
+%% ---------------------------------------------------------------- header ----
+\begin{center}
+  {\LARGE\bfseries NUSHRAT NAUSHIN}\\[0.35em]
+  Albany, CA \quad$|$\quad \href{mailto:naushin264@gmail.com}{naushin264@gmail.com}
+  \quad$|$\quad \href{https://sites.google.com/view/nushrat-naushin/}{website}
+  \quad$|$\quad \href{https://www.linkedin.com/in/nushratn/}{LinkedIn}
+\end{center}
+
+%% --------------------------------------------------------------- summary ----
+\section{Summary}
+
+Materials scientist and metallurgical engineer with 4+ years in synchrotron X-ray spectroscopy and
+microscopy, including two years as an Advanced Light Source Doctoral Fellow at Lawrence Berkeley
+National Laboratory, plus 2.5 years of full-time undergraduate teaching and instructional
+laboratory development. Designs and runs synchrotron experiments (XMCD, XMLD, XPEEM) on thin films
+and complex alloys, builds statistically rigorous Python analysis pipelines for large experimental
+datasets, and brings hands-on thin-film deposition, UHV maintenance, and classical mechanical and
+metallurgical testing.
+
+%% ------------------------------------------------------------ experience ----
+\section{Experience}
+
+\entry{Advanced Light Source, Lawrence Berkeley National Laboratory}{Sep 2024 -- Aug 2026}{ALS Doctoral Fellow}
+\begin{itemize}
+  \item Independently operate beamlines 4.0.2, 6.3.1.1, and 11.0.1.1; train new users on XMCD and
+        XPEEM measurements.
+  \item Lead 20+ beamtime experiments end to end: experimental planning, in-situ decisions during
+        acquisition, and post-experiment data validation.
+  \item Built XMCD sum-rule analysis with six-source Monte Carlo error propagation, and XPEEM
+        asymmetry-map pipelines (drift correction, MCP noise removal, cross-registration, domain
+        heterogeneity metrics) across temperature series.
+  \item Developed and characterized reference multilayer thin films to improve beamline calibration
+        and reproducibility.
+  \item Co-authored 5+ successful beamtime proposals and contributed to multiple manuscripts.
+\end{itemize}
+
+\entry{University of California, Davis}{Sep 2021 -- Expected Sep 2026}{Graduate Student Researcher}
+\begin{itemize}
+  \item Deposit multi-principal element alloy thin films by DC magnetron sputtering and
+        co-sputtering (AJA Orion 8); commission power supplies and maintain UHV systems, including
+        turbomolecular pump repair.
+  \item Lab superuser for the DC/RF sputtering system and Vibrating Sample Magnetometer; trained
+        roughly 20 students on safe instrument operation.
+  \item Correlate structure, composition, and magnetic behavior by combining magnetometry, XRD, and
+        element-specific synchrotron spectroscopy.
+  \item Lead laboratory safety programs, SOP development, and hazardous waste management; recipient
+        of the College of Engineering Safety Excellence Award.
+\end{itemize}
+
+\entry{Khulna University of Engineering and Technology}{Jan 2019 -- Aug 2021}{Lecturer, Materials Science and Engineering}
+\begin{itemize}
+  \item Led outcome-based curriculum development and instruction for 8+ undergraduate theory and
+        laboratory courses, typically about 60 students per class.
+  \item Established and upgraded foundry, ceramics, electrochemical analysis, polymer and
+        composites, and heat-treatment instructional laboratories, including equipment
+        specifications and technical tender documents for major purchases.
+  \item Mentored 10+ students through successful graduate school applications.
+\end{itemize}
+
+%% ------------------------------------------------------------- education ----
+\section{Education}
+
+\entry{University of California, Davis --- Ph.D., Materials Science and Engineering}{Sep 2021 -- Expected Sep 2026}{}
+\begin{itemize}
+  \item Element-specific magnetism and magnetic domain structure in multi-principal element alloy
+        thin films; dissertation on composition-dependent magnetism in MnCoNi. Advanced to
+        candidacy October 2023. PI: Prof.\ Roopali Kukreja.
+\end{itemize}
+
+\entry{Bangladesh University of Engineering and Technology --- B.S., Materials and Metallurgical Engineering}{Oct 2018}{}
+\begin{itemize}
+  \item Honours; GPA 3.79/4.00, ranked 6th of 52. Coursework across extractive and process
+        metallurgy, casting, forming, and joining.
+\end{itemize}
+
+%% ---------------------------------------------------------------- skills ----
+\section{Technical Skills}
+
+\skillline{Thin-Film Synthesis}{DC/RF magnetron sputtering and co-sputtering (AJA Orion 8),
+sol--gel synthesis; UHV operation, maintenance, and troubleshooting including turbomolecular pumps.}
+
+\skillline{Synchrotron and Characterization}{XAS, XMCD, XMLD, XPEEM, XPCS, micro-/nano-diffraction;
+XRR, XRD, VSM, SEM/EDS, AFM, MFM, TEM/electron diffraction.}
+
+\skillline{Data Analysis}{Python (NumPy, Pandas, Jupyter, Matplotlib); Monte Carlo error
+propagation, image registration and similarity metrics; LabVIEW, OriginPro, GenX, Gwyddion.}
+
+\skillline{Mechanical and Metallurgical Testing}{UTM tensile testing; Rockwell and Brinell hardness;
+Charpy and Izod impact; optical emission spectroscopy; metallography; failure analysis.}
+
+\skillline{Tools}{Git, \LaTeX{}, AutoCAD, SolidWorks, Inkscape.}
+
+%% ---------------------------------------------------------- publications ----
+\section{Selected Publications}
+\begin{itemize}
+  \item N.\ Naushin \textit{et al.}, ``Element-specific magnetic moment and domain structure in
+        magnetron-sputtered MnCoNi thin films,'' \textit{J.\ Magn.\ Magn.\ Mater.} (2026).
+        \href{https://doi.org/10.1016/j.jmmm.2026.174250}{10.1016/j.jmmm.2026.174250}
+  \item W.\ Beeson, N.\ Naushin \textit{et al.}, \textit{Adv.\ Funct.\ Mater.} (2025).
+        \href{https://doi.org/10.1002/adfm.202424741}{10.1002/adfm.202424741}
+  \item N.\ Z.\ Hagstrom, N.\ Naushin \textit{et al.}, \textit{Nature Communications} (submitted,
+        2025).
+  \item P.\ Sharma, N.\ Naushin, S.\ Rohila, and A.\ Tiwari, ``Magnesium Containing High Entropy
+        Alloys,'' in \textit{Magnesium Alloys --- Structure and Properties} (2022).
+        \href{https://doi.org/10.5772/intechopen.98557}{10.5772/intechopen.98557}
+\end{itemize}
+
+%% -------------------------------------------------------- awards and press ----
+\section{Awards and Press}
+\begin{itemize}
+  \item ALS Doctoral Fellowship in Residence, Lawrence Berkeley National Laboratory (2024, 2025).
+  \item UC Davis College of Engineering Graduate Excellence Award for Safety (2025).
+  \item BUET Dean's Choice Award (2018); University Merit Scholarship (2015, 2017).
+  \item LPS Qubit Collaboratory Quantum Computing Summer Short Course, Algorithms to Hardware
+        (Jul--Aug 2025).
+  \item Featured in
+        ``\href{https://nobumichitamura.substack.com/p/chaos-by-design-how-mixing-metals}{Chaos by
+        Design}'' by N.\ Tamura, ALS (2026);
+        ``\href{https://mse.engineering.ucdavis.edu/news/college-honors-mse-graduate-students-excellence-safety}{College
+        Honors MSE Graduate Students for Excellence in Safety},'' UC Davis (2025); and
+        ``\href{https://mse.engineering.ucdavis.edu/news/international-womens-day-spotlight-uc-davis-women-materials-science-and-engineering}{International
+        Women's Day Spotlight},'' UC Davis (2024).
+\end{itemize}
+
+%% ----------------------------------------------------------- conferences ----
+\section{Conferences}
+\begin{itemize}
+  \item APS March Meeting --- Presenter (2025, 2026).
+  \item ALS User Meeting --- Invited Speaker (2024); Poster Presenter (2026).
+\end{itemize}
+
+%% --------------------------------------------------------------- service ----
+\section{Service and Mentorship}
+\begin{itemize}
+  \item Trained roughly 20 students on safe operation of the sputtering system and VSM as lab
+        superuser, and mentored 14+ undergraduate and graduate students on advanced instrumentation.
+  \item Mentored students from underrepresented backgrounds through the UC--HBCU and MESA
+        initiatives, including intensive summer mentorship of a visiting undergraduate researcher.
+  \item Advised 10+ former students on graduate school applications; all are now enrolled in
+        graduate programs.
+  \item Secretary, BUET Material Advantage Chapter: organized an inter-university materials poster
+        symposium (50+ teams) and a STEM competition (500+ participants).
+  \item Member, American Physical Society and The Minerals, Metals \& Materials Society.
+\end{itemize}
+
+\end{document}

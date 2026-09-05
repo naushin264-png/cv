@@ -1,0 +1,38 @@
+{
+    "latex-workshop.latex.tools": [
+        {
+            "name": "pdflatex",
+            "command": "powershell",
+            "args": [
+                "-NoProfile",
+                "-ExecutionPolicy",
+                "Bypass",
+                "-File",
+                "C:\\Users\\naush\\Projects\\cv\\.vscode\\pdflatex-wrapper.ps1",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "pdflatex x5",
+            "tools": ["pdflatex", "pdflatex", "pdflatex", "pdflatex", "pdflatex"]
+        }
+    ],
+    "latex-workshop.latex.rootFile.doNotUseArgument": true,
+    "latex-workshop.latex.autoBuild.run": "onFileChange",
+    "latex-workshop.latex.clean.method": "glob",
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux", "*.bbl", "*.bcf", "*.blg", "*.fdb_latexmk", "*.fls",
+        "*.lof", "*.log", "*.lot", "*.run.xml", "*.synctex.gz", "*.toc",
+        "*.xdv", "*.nav", "*.snm", "*.vrb", "*.dvi"
+    ],
+    "latex-workshop.view.pdf.viewer": "tab",
+    "workbench.editor.enablePreview": false,
+    "latex-workshop.view.pdf.tab.editorGroup": "right",
+    "editor.wordWrap": "on",
+    "editor.wordWrapColumn": 100
+}
