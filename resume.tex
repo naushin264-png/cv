@@ -21,6 +21,7 @@
 \usepackage{titlesec}
 \usepackage{xcolor}
 \usepackage{microtype}
+\usepackage{needspace}
 
 \definecolor{linknavy}{HTML}{14487F}
 \definecolor{rulegray}{gray}{0.45}
@@ -67,6 +68,25 @@ and complex alloys, builds statistically rigorous Python analysis pipelines for 
 datasets, and brings hands-on thin-film deposition, UHV maintenance, and classical mechanical and
 metallurgical testing.
 
+%% ---------------------------------------------------------------- skills ----
+%% Skills lead the document: a reader screening for specific instruments and
+%% techniques should hit them before the narrative of the roles.
+\section{Technical Skills}
+
+\skillline{Thin-Film Synthesis}{DC/RF magnetron sputtering and co-sputtering (AJA Orion 8),
+sol--gel synthesis; UHV operation, maintenance, and troubleshooting including turbomolecular pumps.}
+
+\skillline{Synchrotron and Characterization}{XAS, XMCD, XMLD, XPEEM, XPCS, micro-/nano-diffraction;
+XRR, XRD, VSM, SEM/EDS, AFM, MFM, TEM/electron diffraction.}
+
+\skillline{Data Analysis}{Python (NumPy, Pandas, Jupyter, Matplotlib); Monte Carlo error
+propagation, image registration and similarity metrics; LabVIEW, OriginPro, GenX, Gwyddion.}
+
+\skillline{Mechanical and Metallurgical Testing}{UTM tensile testing; Rockwell and Brinell hardness;
+Charpy and Izod impact; optical emission spectroscopy; metallography; failure analysis.}
+
+\skillline{Tools}{Git, \LaTeX{}, AutoCAD, SolidWorks, Inkscape.}
+
 %% ------------------------------------------------------------ experience ----
 \section{Experience}
 
@@ -77,8 +97,8 @@ metallurgical testing.
   \item Lead 20+ beamtime experiments end to end: experimental planning, in-situ decisions during
         acquisition, and post-experiment data validation.
   \item Built XMCD sum-rule analysis with six-source Monte Carlo error propagation, and XPEEM
-        asymmetry-map pipelines (drift correction, MCP noise removal, cross-registration, domain
-        heterogeneity metrics) across temperature series.
+        asymmetry-map pipelines (drift correction, cross-registration, domain heterogeneity
+        metrics) across temperature series.
   \item Developed and characterized reference multilayer thin films to improve beamline calibration
         and reproducibility.
   \item Co-authored 5+ successful beamtime proposals and contributed to multiple manuscripts.
@@ -108,6 +128,9 @@ metallurgical testing.
 \end{itemize}
 
 %% ------------------------------------------------------------- education ----
+%% Hold both degrees together. Without this the section splits and the BUET
+%% entry lands at the top of page 2 with no heading above it.
+\Needspace*{9\baselineskip}
 \section{Education}
 
 \entry{University of California, Davis --- Ph.D., Materials Science and Engineering}{Sep 2021 -- Expected Sep 2026}{}
@@ -122,23 +145,6 @@ metallurgical testing.
   \item Honours; GPA 3.79/4.00, ranked 6th of 52. Coursework across extractive and process
         metallurgy, casting, forming, and joining.
 \end{itemize}
-
-%% ---------------------------------------------------------------- skills ----
-\section{Technical Skills}
-
-\skillline{Thin-Film Synthesis}{DC/RF magnetron sputtering and co-sputtering (AJA Orion 8),
-sol--gel synthesis; UHV operation, maintenance, and troubleshooting including turbomolecular pumps.}
-
-\skillline{Synchrotron and Characterization}{XAS, XMCD, XMLD, XPEEM, XPCS, micro-/nano-diffraction;
-XRR, XRD, VSM, SEM/EDS, AFM, MFM, TEM/electron diffraction.}
-
-\skillline{Data Analysis}{Python (NumPy, Pandas, Jupyter, Matplotlib); Monte Carlo error
-propagation, image registration and similarity metrics; LabVIEW, OriginPro, GenX, Gwyddion.}
-
-\skillline{Mechanical and Metallurgical Testing}{UTM tensile testing; Rockwell and Brinell hardness;
-Charpy and Izod impact; optical emission spectroscopy; metallography; failure analysis.}
-
-\skillline{Tools}{Git, \LaTeX{}, AutoCAD, SolidWorks, Inkscape.}
 
 %% ---------------------------------------------------------- publications ----
 \section{Selected Publications}
